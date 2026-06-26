@@ -110,8 +110,9 @@ scrollTopBtn.addEventListener('click', (e) => {
 const counters = document.querySelectorAll('.counter');
 const speed = 200; // The lower the slower
 
-// Function to start counter animation
-const startCounters = () => {
+// Function to start counter animation for a specific container
+const startCounters = (container) => {
+    const counters = container.querySelectorAll('.counter');
     counters.forEach(counter => {
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
@@ -135,11 +136,10 @@ const startCounters = () => {
     });
 };
 
-// Intersection Observer for Counters
-// Only trigger the animation when the impact section is visible
-const impactSection = document.querySelector('.impact');
+// Intersection Observer for all sections with counters
+const counterSections = document.querySelectorAll('.impact, .research-stats');
 
-if (impactSection) {
+if (counterSections.length > 0) {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -149,13 +149,13 @@ if (impactSection) {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                startCounters();
+                startCounters(entry.target);
                 observer.unobserve(entry.target); // Stop observing once triggered
             }
         });
     }, observerOptions);
     
-    observer.observe(impactSection);
+    counterSections.forEach(section => observer.observe(section));
 }
 
 // Contact Form Submission (Prevent default for UI demo)
