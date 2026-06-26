@@ -21,6 +21,7 @@ The website is designed to be responsive, user-friendly, visually appealing, and
 * **Hero Section:** Engaging landing page with a Call-to-Action.
 * **About Us Section:** Clear and concise information about the foundation.
 * **Ongoing Projects Showcase:** Grid layout of major initiatives.
+* **AI-Powered Research:** Dedicated section presenting data analysis, AI insights, and employability trends in the NGO sector.
 * **Social Impact Statistics:** Animated counters to display data effectively.
 * **Image Gallery:** Dynamic grid layout to showcase foundation events and activities.
 * **Volunteer & Donation:** Dedicated Call-to-Action section.
@@ -53,6 +54,9 @@ InAmigos-NGO-Awareness-Website
 ├── index.html          # Main HTML markup
 ├── style.css           # Custom CSS styling
 ├── script.js           # Navigation and Animation logic
+│
+├── Report/             # Downloadable reports
+│   └── AI_Social_Impact_Report.pdf
 │
 └── img/                # All static image assets
     ├── hero_bg.jpg
@@ -88,6 +92,9 @@ Highlights of major initiatives including:
 
 ### 📈 Impact
 Displays key statistics related to volunteers, beneficiaries, causes, and outreach using animated counters.
+
+### 🧠 AI Insights
+Detailed analysis and trends on how AI tools and full-stack mentorship are bridging the digital divide, complete with a downloadable PDF report.
 
 ### 📷 Gallery
 Visual representation of activities and community engagement.
